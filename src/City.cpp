@@ -26,7 +26,7 @@ void City::draw()
 	int x = getPosition().x;
 	int y = getPosition().y;
 
-	TheTextureManager::Instance()->draw("ocean", x, y,
+	TheTextureManager::Instance()->draw("city", x, y,
 		TheGame::Instance()->getRenderer(), 0, 255, false);
 }
 

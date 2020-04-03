@@ -3,6 +3,7 @@
 #include "GLM/gtx/string_cast.hpp"
 #include <algorithm>
 #include <iomanip>
+#include "TankScene.h"
 
 
 Game* Game::s_pInstance = 0;
@@ -159,6 +160,9 @@ void Game::changeSceneState(SceneState newState)
 			m_currentScene = new EndScene();
 			std::cout << "end scene activated" << std::endl;
 			break;
+		case SceneState:: TANK_SCENE:
+			m_currentScene = new TankScene();
+			std::cout << "tank scene activated" << std::endl;
 		default:
 			std::cout << "default case activated" << std::endl;
 			break;
